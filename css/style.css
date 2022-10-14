@@ -1,0 +1,527 @@
+html {
+   font-family: "Manrope", sans-serif;
+}
+
+/* this is just for the screen reader only, wont pop up normally */
+.sr-only {
+  position: absolute;
+  top: auto;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+  }
+   
+body{
+margin: auto;
+background-image: url("../designs/Mesh-62.jpg");/* the first . is to leave the css folder then the second . is to enter the images folder */
+background-repeat: no-repeat; /* prevents img from repeating on default */
+background-size: cover;
+min-height: 100%;
+max-width: 65%;
+
+    }
+
+.navbar {
+width: 100%;
+display: flex; /* keeps brand and links on same line */
+justify-content: space-between; /* Creates the space between the brand title and links */
+align-items: center;
+color: rgb(66, 15, 114); 
+margin-top: .5rem;
+}
+
+.brand-title{
+font-size: 2.25rem;
+font-weight: 800;
+
+}
+.brand-logo {
+   max-height: 2.5rem;
+   margin-bottom: -.25rem;
+}
+
+.navbar-links ul {
+margin: 0;
+padding: 0;
+display: flex;
+
+}
+.navbar-links li {
+   list-style: none;
+}
+.navbar-links li a {
+   color: #12235e;
+   padding: .5rem;
+   display: block;
+   font-size: 1.5rem;
+   font-weight: 800;
+
+}
+.navbar-links li:hover {
+background-color: #4596dd;
+text-decoration:underline;
+}
+
+
+.toggle-button {
+ position:absolute;
+ top: 1rem;
+ right:3.25rem;
+ display: none;
+ flex-direction: column; /*allows for hamburger lines to stack on top of each other*/
+ justify-content: space-between;
+ width: 2rem;
+ height: 1.2rem;
+}
+
+.header h2 {
+font-weight: 800;
+font-size: 7rem;
+color: #12235e;
+text-align: left;
+}
+
+.header h3 { 
+   font-weight: 600;
+   font-size: 2rem;
+   display:flex;
+   flex-wrap: nowrap;
+   text-align: left;
+   color: #6b2181;
+   /* white-space: nowrap; this allows the text to remain on same line*/
+   margin-top: -3.5rem;
+}
+
+.crypto-icon {
+width: 20%;
+position: relative;
+left: 15rem;
+bottom: 12rem;
+display: none;
+}
+
+.services {
+   font-size: 4rem;
+   text-align: center;
+   color:#551d66;
+}
+
+.card-container{
+ background-color: rgb(169, 87, 185); /* adding background color so you are able to see how big div is */
+ max-width: 45rem;
+ display: grid;
+ grid-template-columns: 1fr;
+ box-shadow: 0px 20px 30px -5px rgb(29, 21, 21); /* shawdow at bottom of card */
+ border-radius: 1rem;  /*rounds off the corners of the card */
+ padding: 0 0 2rem 0; /* give the html space away from top and bottom */
+ gap: 1rem;
+ margin: 10rem auto;
+ justify-items: center; /* allows for html to be centered horizontally*/
+ 
+      }
+
+.card-input {  /* form container */
+   width: 70% ;
+   display: grid;
+   grid-template-columns: repeat(autofill, minmax(10rem, 1fr));
+   text-align: center;
+   gap: 1rem;
+   font-family:inherit;
+}
+
+.card-heading{
+   font-weight: 800;
+   font-size: 1.75rem;
+   text-align: center;
+   color:#12235e;
+}
+ 
+.form-group{  /* card text description */
+   display: grid;
+   grid-template-columns: 1fr 1fr; /* will create a column of 2*/
+  font-weight: 800;
+  font-size: 1.75rem;
+  line-height: normal; /* This Keeps the text vertically centered  */ 
+  color: #123666;
+  text-align: right;
+  max-width: 100%;
+}
+
+.input-container {  /* User input section */
+   max-width: 90%;
+   border-radius: 2rem;
+   background: #ecd5f393; 
+   color: #3c4b7a;
+   line-height: 1.6rem;
+   font-family: "Manrope", sans-serif;
+   font-size: 1rem;
+   font-weight: 900;
+   text-align: center;
+
+}
+
+
+.input-btn, .input-btn2 {  /* Calculate btn  */
+   width: 80%;
+   cursor: pointer;
+   font-weight: 600;
+   font-size: 1.2rem;
+   line-height: 1.6rem;
+   transition: color 250ms ease-in-out; /* dictates how fast the button will light up and reverse it self when hovered over */
+   margin: auto;
+   font-size: 1.25rem;
+   font-weight: 900;
+}
+
+
+.input-btn:hover, .input-btn2:hover {
+   background: rgb(233, 212, 241);
+ }
+
+ 
+ 
+   
+  label {
+   padding: 0 .5rem 0 0;
+  }
+
+/* Footer */
+ 
+ .footer-container {
+text-align: center;
+display: grid;
+justify-content: center;
+font-size: 1.5rem;
+font-weight: 800;
+
+ }
+ 
+ /* Footer links */
+ 
+.footer-links {
+   display: flex;
+   gap: 1rem;
+   justify-content: center;
+   font-size: 1.5rem;
+   font-weight: 800;
+   margin: 1rem;
+   list-style: none;
+ }
+
+ .footer-links a{
+   color:#12235e;
+  
+ }
+
+ .copyright {
+   color: #7193be;
+ }
+ .footer-links a:hover {
+   background-color: #4596dd;
+   text-decoration: none;
+   
+   }
+
+ 
+ /* Media Queries */
+ 
+
+ /* navbar media query  */
+ @media (min-width:320px) and (max-width: 480px) {
+   
+ body{
+   max-width: 90%;
+ }
+
+.crypto-icon{
+   display: none;
+}
+
+   /* navbar media query  */
+.brand-title{
+font-size: 1.25rem;
+font-weight: 800;
+}
+.brand-logo{
+   height: 2rem;
+}
+.toggle-button{
+display: flex;
+}
+
+.toggle-button .bar {
+height: 3px;
+width: 100%;
+background-color: rgb(62, 51, 163);
+border-radius: 1rem;
+margin: 0 auto ;
+}
+.navbar-links { 
+display: none;
+width: 100%;
+}
+.navbar {
+flex-direction: column;
+align-items: flex-start;
+}
+.navbar-links ul {
+flex-direction: column;
+width: 100%;
+}
+.navbar-links li {
+text-align: center;
+}
+.navbar-links li a {
+padding: .25rem .5rem
+}
+.navbar-links.active {
+display: flex;
+}
+
+   /* heading  */
+
+.header h2 {
+font-size: 3rem;
+
+      }    
+.header h3 { 
+font-size: 1.25rem;
+margin-top: -1.5rem;
+}      
+.services {
+   font-size: 2rem;
+}     
+
+.crypto-img {
+   display: none; 
+}
+
+ /* Calculator container  */
+
+ .card-container{
+   width: 100%;
+        }
+
+ .card-input { /* Form */
+   width: 100% ;
+}
+
+ 
+.form-group{  /* card text description */
+  font-weight: 800;
+  font-size: 1.25rem;
+  max-width: 100%;
+}
+
+.input-container {  /* User input section */
+   width: 100%;
+   height: 1.75rem;
+}
+
+.input-btn, .input-btn2 {  /* Calculate btn  */
+   font-size: 1.2rem;
+   font-weight: 900;
+   height: auto;
+}
+
+/* Footer */
+ 
+.footer-links a{
+   font-size: 1rem;
+   color: #1a3196;
+   font-weight: 800;
+   gap: 1rem;
+ }
+
+ .copyright{
+   font-size: 1rem;
+ }
+
+
+}
+
+@media (min-width:481px) and (max-width: 768px) {
+               
+   /* navbar media query  */
+.brand-title{
+font-size: 1.5rem;
+font-weight: 800;
+}
+.brand-logo{
+   height: 2rem;
+}
+.toggle-button{
+display: flex;
+}
+
+.toggle-button .bar {
+height: 3px;
+width: 100%;
+background-color: rgb(62, 51, 163);
+border-radius: 1rem;
+}
+.navbar-links { 
+display: none;
+width: 100%;
+}
+.navbar {
+flex-direction: column;
+align-items: flex-start;
+}
+.navbar-links ul {
+flex-direction: column;
+width: 100%;
+}
+.navbar-links li {
+text-align: center;
+}
+.navbar-links li a {
+padding: .25rem .5rem
+}
+.navbar-links.active {
+display: flex;
+}
+
+   /* heading  */
+
+.header h2 {
+font-size: 3rem;
+
+      }    
+.header h3 { 
+font-size: 1.25rem;
+margin-top: -1.5rem;
+}      
+.services {
+   font-size: 2rem;
+}     
+
+.crypto-img {
+   display: none; 
+}
+
+
+ .card-input { /* Form */
+   width: 100% ;
+   font-family:inherit;
+}
+
+ 
+.form-group{  /* card text description */
+  font-weight: 800;
+  font-size: 1.25rem;
+  max-width: 100%;
+}
+
+.input-container {  /* User input section */
+   width: 100%;
+   height: 1.75rem;
+   font-size: 1rem;
+   font-weight: 900;
+
+}
+
+
+.input-btn, .input-btn2{  /* Calculate btn  */
+   font-size: 1.2rem;
+   font-weight: 900;
+   height: auto;
+}
+
+}
+
+@media (min-width:769px) and (max-width:1073px) {
+               
+   /* navbar media query  */
+.brand-title{
+font-size: 1.5rem;
+font-weight: 800;
+}
+.brand-logo{
+   height: 2rem;
+}
+.toggle-button{
+display: flex;
+}
+
+.toggle-button .bar {
+height: 3px;
+width: 100%;
+background-color: rgb(62, 51, 163);
+border-radius: 1rem;
+}
+.navbar-links { 
+display: none;
+width: 100%;
+}
+.navbar {
+flex-direction: column;
+align-items: flex-start;
+}
+.navbar-links ul {
+flex-direction: column;
+width: 100%;
+}
+.navbar-links li {
+text-align: center;
+}
+.navbar-links li a {
+padding: .25rem .5rem
+}
+.navbar-links.active {
+display: flex;
+}
+
+   /* heading  */
+
+.header h2 {
+font-size: 3rem;
+
+      }    
+.header h3 { 
+font-size: 1.25rem;
+margin-top: -1.5rem;
+}      
+.services {
+   font-size: 2rem;
+}     
+
+.crypto-img {
+   display: none; 
+}
+
+ .card-input { /* Form */
+   width: 100% ;
+   font-family:inherit;
+
+}
+
+ 
+.form-group{  /* card text description */
+  font-weight: 800;
+  font-size: 1.5rem;
+  max-width: 100%;
+}
+
+.input-container {  /* User input section */
+   width: 100%;
+   height: 1.75rem;
+   font-size: 1rem;
+   font-weight: 900;
+   margin: auto 0 ; /* Pushes the input text to the center of the element*/
+
+}
+
+
+.input-btn, .input-btn2 {  /* Calculate btn  */
+   width: 80%;
+   cursor: pointer;
+    margin: auto;
+   font-size: 1.2rem;
+   font-weight: 900;
+   height: auto;
+}
+
+}

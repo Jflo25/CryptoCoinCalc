@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="app.js" defer></script>
+    <!-- google font Manrope 600 and 800  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&family=Montserrat:wght@900&family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="preconnect"
+      href="@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);"
+    />
+
+    <title>Crypto Coin Calculator</title>
+  </head>
+
+  <body>
+    <div class="whole-container">
+      <nav class="navbar">
+        <div class="brand-title">
+          <img class="brand-logo" src="./designs/crypto-icon.png" />Crypto Coin
+          Calc
+        </div>
+        <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <h1 class="sr-only">Crypto Coin Calculator</h1>
+
+      <header class="header">
+        <h2>Crypto Coin Calc</h2>
+        <!-- <img class="crypto-icon" src="./designs/crypto-icon.png"> -->
+        <h3>
+          Calculating your future crypto investments just got easy.<img
+            class="crypto-icon"
+            src="./designs/exchange.png"
+          />
+        </h3>
+      </header>
+
+      <p class="services">Services</p>
+      <div class="card-container">
+        <form action="" method="post" name="" class="card-input">
+          <p class="card-heading">Crypto Profit Calculator</p>
+          <div class="form-group">
+            <label class="coin-price" for="">Coin price:</label>
+            <input
+              class="input-container"
+              name="coin_price"
+              id="coin_price"
+              type="number"
+              placeholder="$"
+            />
+          </div>
+
+          <div class="form-group">
+            <label class="amount-invested" for="">Investment Sum:</label>
+            <input
+              class="input-container"
+              name="amount_invested"
+              id="amount_invested"
+              type="number"
+              placeholder="$USD"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="" class="target-price">Target sell price:</label>
+            <input
+              class="input-container"
+              name="target_price"
+              id="target_price"
+              type="number"
+              placeholder="$0"
+            />
+          </div>
+
+          <input
+            name="calc-button"
+            type="button"
+            class="input-container input-btn"
+            value="Calculate Profit"
+          />
+
+          <div class="form-group">
+            <label class="potential-price">potential return:</label>
+            <input class="input-container" id="potential" name="potential" />
+          </div>
+
+          <div class="form-group">
+            <label class="profit-loss">Profit/loss:</label>
+            <input
+              class="input-container"
+              name="profit_loss"
+              id="profit_loss"
+            />
+          </div>
+        </form>
+      </div>
+
+      <!-- staking Calculator -->
+
+      <div class="card-container">
+        <form action="" method="post" name="" class="card-input">
+          <p class="card-heading">Staking Yield Calculator</p>
+          <div class="form-group">
+            <label class="Investment" for="">Staking Amount:</label>
+            <input
+              class="input-container"
+              name="investment"
+              id="staking_amount"
+              type="number"
+              placeholder="0"
+            />
+          </div>
+
+          <div class="form-group">
+            <label class="apy" for="">APY %:</label>
+            <input
+              class="input-container"
+              name="apy"
+              id="apy"
+              type="number"
+              placeholder="%"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="" class="months">Duration:</label>
+            <input
+              class="input-container"
+              name="months"
+              id="months"
+              type="number"
+              placeholder="Months"
+            />
+          </div>
+
+          <input
+            name="calc-button"
+            type="button"
+            class="input-container input-btn2"
+            value="Calculate Yield"
+          />
+
+          <div class="form-group">
+            <label class="potential-yield">Potential Yield:</label>
+            <input class="input-container" id="yield" name="potential" />
+          </div>
+
+          <div class="form-group">
+            <label class="total-amount">Total:</label>
+            <input
+              class="input-container"
+              id="total_amount"
+              name="total_amount"
+            />
+          </div>
+        </form>
+      </div>
+
+      <!-- footer -->
+      <footer class="footer-container">
+        <ul class="footer-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+
+        <p class="copyright">Crypto Coin Calc &copy; 2022</p>
+      </footer>
+    </div>
+  </body>
+</html>
